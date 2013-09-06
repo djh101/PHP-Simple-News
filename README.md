@@ -1,5 +1,6 @@
 PHP-Simple-News
 ===============
+http://onlinesciencetools.com/scripts/php_simple_news
 
 Simple News is a simple PHP/Javascript/HTML5 application used to create and edit news posts. Simple News can be used immediately upon installation or can be styled and customized as desired. Simple News does not include login functionality and must be configured with a form of administrative authentication.
 
@@ -18,3 +19,6 @@ Open the page containing your news widget. A new database table will be created 
 	int $authid The id of the post author (used for $idmatch checking). Default is -1 (post can be edited publicly).
 	boolean $idmatch Determines whether a post can be modified by anyone (false) or only by the author who created it (true). Default is false.
 	string $path_ajax Sets the path to the news_ajax.php file. Default is the same directory as the main page.
+
+
+For support questions and feedback, visit http://onlinesciencetools.com/contact/
