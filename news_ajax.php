@@ -31,8 +31,8 @@ if(isset($_POST['id']) && isset($_POST['method']) && ($_POST['method'] == "new" 
 				$title = isset($_POST['title']) ? $_POST['title'] : "";
 				$body = isset($_POST['body']) ? $_POST['body'] : "";
 				$title = preg_replace(array("%<.*>%"),array(""),$title); //REMOVE HTML FROM TITLE
-				$body = preg_replace(array("%<div>%","%</div>%"),array("<p>","</p>"),$body); //IN CONTENTEDITABLE DIVS, LINEBREAKS ARE CONVERTED TO <DIV></DIV>. WE ARE GOING TO REPLACE THESE WITH PARAGRAPHS.
-				if(!preg_match("%^<p>%",$body) && !preg_match("%</p>$%",$body)) $body = "<p>".$body."</p>"; //<P> TAGS ARE ADDED AT THE BEGINNING AND END OF THE NEWS BODY IF THEY DONT ALREADY EXIST (THIS PREVENTS DUPLICATION)
+				$body = preg_replace(array("%<div%","%</div>%"),array("<p","</p>"),$body); //IN CONTENTEDITABLE DIVS, LINEBREAKS ARE CONVERTED TO <DIV></DIV>. WE ARE GOING TO REPLACE THESE WITH PARAGRAPHS.
+				if(!preg_match("%^<p%",$body) && !preg_match("%</p>$%",$body)) $body = "<p>".$body."</p>"; //<P> TAGS ARE ADDED AT THE BEGINNING AND END OF THE NEWS BODY IF THEY DONT ALREADY EXIST (THIS PREVENTS DUPLICATION)
 				$title = htmlentities($title);
 				$body = htmlentities($body);
 				
