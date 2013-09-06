@@ -60,6 +60,7 @@ class News {
 							document.getElementById('news_title').innerHTML = getvars.getElementsByTagName('title')[0].childNodes[0].nodeValue;
 							document.getElementById('news_body').innerHTML = getvars.getElementsByTagName('body')[0].childNodes[0].nodeValue;
 							document.getElementById('news_author').firstChild.innerHTML = getvars.getElementsByTagName('author')[0].childNodes[0].nodeValue;
+							getvars.getElementsByTagName('author')[0].childNodes[0].nodeValue == "" ? document.getElementById('news_author').style.display = "none" : document.getElementById('news_author').style.display = "block";
 							document.getElementById('news_date').innerHTML = getvars.getElementsByTagName('date')[0].childNodes[0].nodeValue;
 						}
 					} else if(xmlhttp.status==404){
@@ -173,7 +174,7 @@ class News {
 					<!-- BODY -->
 					<div id="news_body"<?php if($readonly === false){ ?> contenteditable="true" onfocus="news_focus();" onblur="news_focus();"<?php } ?>><?php echo $news['body']; ?></div>
 					<textarea id="news_body_raw" style="display: none;"<?php if($readonly === false){ ?>onfocus="news_focus();" onblur="news_focus();"<?php } else { ?>readonly<?php } ?>><p><?php echo $news['body']; ?></p></textarea>
-					<div id="news_author"><span><?php echo $news['author']; ?></span></div>
+					<div id="news_author" style="<?php if(empty($news['author'])) echo "display: none;"; ?>"><span><?php echo $news['author']; ?></span></div>
 				</article>
 				<!-- EDIT BUTTONS -->
 				<?php if($readonly === false){ ?>
