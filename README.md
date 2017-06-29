@@ -1,6 +1,6 @@
 PHP-Simple-News
 ===============
-http://onlinesciencetools.com/scripts/php_simple_news
+http://parasolarchives.com/scripts/php_simple_news
 
 Simple News is a simple PHP/Javascript/HTML5 application used to create and edit news posts. Simple News can be used immediately upon installation or can be styled and customized as desired. Simple News does not include login functionality and must be configured with a form of administrative authentication.
 
@@ -21,4 +21,4 @@ Open the page containing your news widget. A new database table will be created 
 	string $path_ajax Sets the path to the news_ajax.php file. Default is the same directory as the main page.
 
 
-For support questions and feedback, visit http://onlinesciencetools.com/contact/
+For support questions and feedback, visit http://parasolarchives.com/contact/
